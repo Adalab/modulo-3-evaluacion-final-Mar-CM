@@ -14,7 +14,7 @@ body {
   align-items: center;
   margin-top: 25px;
   img{
-    width: 65%;
+    width: 50%;
   }
 };
 
@@ -87,11 +87,21 @@ a {
 .detail {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 40px;
   background-image: url("../images/backvector-removebg-preview.png");
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
+  animation: InCenter 1s ease forwards;
+
+  @keyframes InCenter {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
   &__character{
     display: flex;

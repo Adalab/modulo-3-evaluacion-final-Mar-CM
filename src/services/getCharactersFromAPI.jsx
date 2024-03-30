@@ -14,6 +14,9 @@ const getCharactersFromAPI = () => {
 					episodes: character.episode.length,
 				};
 			});
+			charactersInput.sort(function (a, b) {
+				return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
+			});
 			return charactersInput;
 		});
 };
