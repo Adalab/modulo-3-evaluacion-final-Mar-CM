@@ -13,18 +13,20 @@ function Filters({
 	valueSpecie,
 }) {
 	return (
-		<form className="form">
-			<FilterByName onChangeName={onChangeName} valueName={valueName} />
-			<FilterBySpecies
-				onChangeSpecie={onChangeSpecie}
-				valueSpecie={valueSpecie}
-			/>
-			<FilterByGender
-				onChangeGender={onChangeGender}
-				valueGender={valueGender}
-			/>
-			<FilterByStatus onChangeStatus={onChangeStatus} />
-		</form>
+		<section>
+			<form className="form">
+				<FilterByName onChangeName={onChangeName} valueName={valueName} />
+				<FilterBySpecies
+					onChangeSpecie={onChangeSpecie}
+					valueSpecie={valueSpecie}
+				/>
+				<FilterByGender
+					onChangeGender={onChangeGender}
+					valueGender={valueGender}
+				/>
+				<FilterByStatus onChangeStatus={onChangeStatus} />
+			</form>
+		</section>
 	);
 }
 
