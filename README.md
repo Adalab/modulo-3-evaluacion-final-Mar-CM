@@ -8,24 +8,24 @@ Bienvenidos al examen final del módulo 3. Aquí estoy presentando una plataform
 
 ## Objetivos 🎯
 
-- Dar funcionalidad a la página web con utilizando React.
-- Realizar peticiones al servidor y almacenar los datos localmente usando LocalStorage.
-- Aprender y aplicar conceptos como variables, estructuras de datos, condicionales, funciones y eventos.
+- Dar funcionalidad a la página web con utilizando React + JS.
+- Realizar peticiones al servidor mediando una API y mostrarlo en nuestra página.
+- Aprender y aplicar conceptos de React, Router, Gitpages. .
 
 > **NOTA:** El proposito de este examen es para saber el nivel de progresión del módulo. Podremos de esta forma saber en que puntos tenemos que reforzar y prestar más atención y aquellos conceptos que ya dominamos.
 
 ## Funcionamiento ⚙️
 
 1. Escribe el nombre del personaje y automáticamente aparecerá en la interfaz.
-2. Si no te sabes el nombre, puedes intentar buscarlo con los filtros proporcionados: especie, genero, vivo, muerto.
-3. clica en el personaje y abrirás una pestaña con la información del mismo.
+2. Si no te sabes el nombre, puedes intentar buscarlo con los filtros proporcionados: especie, genero, estado.
+3. Clica en el personaje y abrirás una pestaña con la información del mismo. Desde la carta individual del personaje, puedes volver al inicio, pulsando a la X.
 4. Elimina todos los parametros para volver al punto inicial.
 
 ## Tecnologías implementadas 🚧
 
 El proyecto utiliza las siguientes tecnologías:
 
-- Sass: Sass es un preprocesador de CSS que permite escribir estilos de manera más eficiente y organizada, con características como variables, anidamiento y mixins.
+- SASS: Sass es un preprocesador de CSS que permite escribir estilos de manera más eficiente y organizada, con características como variables, anidamiento y mixins.
 
 - React.js: React.js es una biblioteca de JavaScript utilizada para construir interfaces de usuario interactivas y reutilizables. En este proyecto, React se utiliza para manejar la interfaz de usuario y los componentes de la aplicación.
 
@@ -66,7 +66,3 @@ npm install
 ```bash
 npm run dev
 ```
-
-## Conclusión 💡
-
-🎉 **_¡Filtra!_** 🎉
