@@ -1,4 +1,4 @@
-import "../scss/App.scss";
+import { Link } from "react-router-dom";
 
 function CharacterCardDetail({ characterDetailData }) {
 	return (
@@ -18,6 +18,9 @@ function CharacterCardDetail({ characterDetailData }) {
 					<p>{`Episodios: ${characterDetailData.episodes}`}</p>
 				</div>
 			</div>
+			<Link to="/" className="close">
+				X
+			</Link>
 		</section>
 	);
 }

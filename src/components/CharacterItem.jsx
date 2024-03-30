@@ -1,4 +1,3 @@
-import "../scss/App.scss";
 import { Link } from "react-router-dom";
 
 function CharacterItem({ characterItem }) {

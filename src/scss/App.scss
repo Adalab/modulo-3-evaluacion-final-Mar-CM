@@ -13,9 +13,15 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 25px;
+  img{
+    width: 65%;
+  }
 };
 
-
+a {
+  text-decoration: none;
+  color: #F6FAF0;
+}
 
 .form {
   display: flex;
@@ -31,7 +37,7 @@ body {
     width: 300px;
     border-radius: 5px;
     cursor: pointer;
-    color: #1A8E43;
+    color: white;
     background-color: black;
 
     ::placeholder {
@@ -51,16 +57,17 @@ body {
   gap: 15px;
   padding: 10px;
   margin: 30px 20px 20px 20px;
+
   &__characters {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     background: radial-gradient(circle, #07B0C5, #D8F9FE);
-    color: #F6FAF0;
     padding: 10px;
     text-align: center;
     border-radius: 15px;
+
     img {
       width: 80%;
       transition: transform 0.5s ease, border-radius 0.5s ease; 
@@ -69,6 +76,10 @@ body {
     img:hover {
       transform: scale(0.9);
       border-radius: 50%;
+      border: 3px solid white;
+    }
+    &:hover{
+      background: radial-gradient(circle, transparent, transparent);
     }
   };
 };
@@ -76,7 +87,7 @@ body {
 .detail {
   display: flex;
   justify-content: center;
-  padding: 50px;
+  padding: 20px;
   background-image: url("../images/backvector-removebg-preview.png");
   background-repeat: no-repeat;
   background-size: auto;
@@ -85,7 +96,7 @@ body {
   &__character{
     display: flex;
     align-items: center;
-    padding: 25px;
+    padding: 25px 0 25px 0;
     flex-direction: column;
     padding-left: 40px;
 
@@ -103,4 +114,35 @@ body {
       font-weight: bold;
     }
   }
-}
+};
+
+.close {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  background-color: darkred;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+
+  &:hover {
+    background-color: red;
+    transform: scale(1.1);
+  }
+};
+
+.gender {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 70px;
+  &__female{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__male{
+    display: flex;
+    justify-content: space-between;
+  }
+};

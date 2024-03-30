@@ -1,4 +1,3 @@
-import "../scss/App.scss";
 import CharacterItem from "./CharacterItem";
 
 function CharactersList({ characters }) {
