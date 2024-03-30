@@ -4,8 +4,8 @@ body {
   background-image: url("../images/fondo.jpg");
   width: 100%;
   height: 100%;
-  background-size: cover; /* Utiliza "cover" para cubrir toda la pantalla */
-  background-position: center; /* Centra la imagen */
+  background-size: cover; 
+  background-position: center;
 };
 
 .title {
@@ -75,12 +75,32 @@ body {
 
 .detail {
   display: flex;
-  align-content: center;
   justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle, #07B0C5, #D8F9FE);
-  padding: 10px;
-  img {
-    width: 80%;
+  padding: 50px;
+  background-image: url("../images/backvector-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+
+  &__character{
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    flex-direction: column;
+    padding-left: 40px;
+
+    &--picture{
+      padding: 5px 0px 15px 120px;
+      img {
+        width: 60%;
+        border-radius: 50%;
+      }
+    }
+
+    &--text {
+      text-align: center;
+      color: black;
+      font-weight: bold;
+    }
   }
-};
+}
