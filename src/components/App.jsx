@@ -6,6 +6,7 @@ import Header from "./Header.jsx";
 import Filters from "./filters/Filters.jsx";
 import CharactersList from "./CharactersList.jsx";
 import CharacterCardDetail from "./CharacterCardDetail.jsx";
+import ResetFilters from "./ResetFilters.jsx";
 
 import getCharactersFromAPI from "../services/getCharactersFromAPI.jsx";
 
@@ -14,6 +15,7 @@ function App() {
 	const [filterName, setFilterName] = useState("");
 	const [filterGender, setFilterGender] = useState("");
 	const [filterSpecie, setFilterSpecie] = useState("");
+	const [filterStatus, setFilterStatus] = useState([]);
 
 	useEffect(() => {
 		getCharactersFromAPI().then((charactersData) => {
@@ -33,6 +35,28 @@ function App() {
 		setFilterSpecie(value);
 	};
 
+	const handleChangeStatus = (value) => {
+		if (filterStatus.includes(value)) {
+			setFilterStatus(filterStatus.filter((status) => status !== value));
+		} else {
+			setFilterStatus([...filterStatus, value]);
+		}
+	};
+
+	const handledeletetFilters = () => {
+		setFilterName("");
+		setFilterGender("");
+		setFilterSpecie("");
+		setFilterStatus([]);
+		deselectCheckbox();
+		document.getElementById("species").selectedIndex = 0;
+	};
+
+	function deselectCheckbox() {
+		const checkbox = document.getElementsByName("status");
+		checkbox.forEach((item) => (item.checked = false));
+	}
+
 	const nameCharacterFilter = characters
 		.filter((character) => {
 			return character.name.toLowerCase().includes(filterName.toLowerCase());
@@ -41,7 +65,18 @@ function App() {
 			return filterGender ? filterGender === character.gender : true;
 		})
 		.filter((character) => {
-			return filterSpecie ? character.specie === filterSpecie : true;
+			if (filterSpecie !== "Human" && filterSpecie !== "Alien") {
+				return true;
+			} else {
+				return filterSpecie ? character.specie === filterSpecie : true;
+			}
+		})
+		.filter((character) => {
+			if (filterStatus.length === 0) {
+				return true;
+			} else {
+				return filterStatus.includes(character.status);
+			}
 		});
 
 	const { pathname } = useLocation();
@@ -62,6 +97,7 @@ function App() {
 						path="/"
 						element={
 							<>
+								<ResetFilters restartFilters={handledeletetFilters} />
 								<Filters
 									valueName={filterName}
 									valueGender={filterGender}
@@ -69,6 +105,7 @@ function App() {
 									onChangeName={handleChangeName}
 									onChangeGender={handleChangeGender}
 									onChangeSpecie={handleChangeSpecie}
+									onChangeStatus={handleChangeStatus}
 								/>
 								<CharactersList characters={nameCharacterFilter} />
 							</>
