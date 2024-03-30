@@ -4,8 +4,8 @@ function FilterByGender({ onChangeGender, valueGender }) {
 	};
 
 	return (
-		<div className="gender">
-			<div className="gender__female">
+		<div className="container__gender">
+			<div className="container__gender--female">
 				<label htmlFor="female">Mujer</label>
 				<input
 					type="radio"
@@ -16,7 +16,7 @@ function FilterByGender({ onChangeGender, valueGender }) {
 					onChange={handleChange}
 				/>
 			</div>
-			<div className="gender__male">
+			<div className="container__gender--male">
 				<label htmlFor="male">Hombre</label>
 				<input
 					type="radio"

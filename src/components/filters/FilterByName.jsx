@@ -3,10 +3,10 @@ function FilterByName({ onChangeName, valueName }) {
 		onChangeName(event.target.value);
 	};
 	return (
-		<div>
+		<div className="container__name">
 			<label htmlFor="name"></label>
 			<input
-				className="form__input"
+				className="container__name--input"
 				type="text"
 				name="name"
 				id="name"

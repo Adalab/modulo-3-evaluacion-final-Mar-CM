@@ -14,7 +14,7 @@ function Filters({
 }) {
 	return (
 		<section>
-			<form className="form">
+			<form className="container__form">
 				<FilterByName onChangeName={onChangeName} valueName={valueName} />
 				<FilterBySpecies
 					onChangeSpecie={onChangeSpecie}

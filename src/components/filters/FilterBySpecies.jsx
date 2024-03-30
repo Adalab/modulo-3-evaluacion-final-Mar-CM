@@ -5,7 +5,7 @@ function FilterBySpecies({ onChangeSpecie, valueSpecie }) {
 
 	return (
 		<div>
-			<label htmlFor="species"></label>
+			<label htmlFor="container__species"></label>
 			<select name="species" id="species" onChange={handleSpecies}>
 				<option value="all">Todos</option>
 				<option value="Human">Humano</option>

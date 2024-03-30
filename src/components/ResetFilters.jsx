@@ -1,7 +1,9 @@
 function ResetFilters({ restartFilters }) {
 	return (
-		<section>
-			<button onClick={restartFilters}>Reset</button>
+		<section className="container__reset">
+			<button className="container__reset--button" onClick={restartFilters}>
+				Reset
+			</button>
 		</section>
 	);
 }

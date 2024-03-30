@@ -97,7 +97,6 @@ function App() {
 						path="/"
 						element={
 							<>
-								<ResetFilters restartFilters={handledeletetFilters} />
 								<Filters
 									valueName={filterName}
 									valueGender={filterGender}
@@ -107,6 +106,7 @@ function App() {
 									onChangeSpecie={handleChangeSpecie}
 									onChangeStatus={handleChangeStatus}
 								/>
+								<ResetFilters restartFilters={handledeletetFilters} />
 								<CharactersList characters={nameCharacterFilter} />
 							</>
 						}
