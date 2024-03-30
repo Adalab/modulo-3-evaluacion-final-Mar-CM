@@ -13,6 +13,7 @@ function App() {
 	const [characters, setCharacters] = useState([]);
 	const [filterName, setFilterName] = useState("");
 	const [filterGender, setFilterGender] = useState("");
+	const [filterSpecie, setFilterSpecie] = useState("");
 
 	useEffect(() => {
 		getCharactersFromAPI().then((charactersData) => {
@@ -28,12 +29,19 @@ function App() {
 		setFilterGender(value);
 	};
 
+	const handleChangeSpecie = (value) => {
+		setFilterSpecie(value);
+	};
+
 	const nameCharacterFilter = characters
 		.filter((character) => {
 			return character.name.toLowerCase().includes(filterName.toLowerCase());
 		})
 		.filter((character) => {
 			return filterGender ? filterGender === character.gender : true;
+		})
+		.filter((character) => {
+			return filterSpecie ? character.specie === filterSpecie : true;
 		});
 
 	const { pathname } = useLocation();
@@ -57,8 +65,10 @@ function App() {
 								<Filters
 									valueName={filterName}
 									valueGender={filterGender}
+									valueSpecie={filterSpecie}
 									onChangeName={handleChangeName}
 									onChangeGender={handleChangeGender}
+									onChangeSpecie={handleChangeSpecie}
 								/>
 								<CharactersList characters={nameCharacterFilter} />
 							</>

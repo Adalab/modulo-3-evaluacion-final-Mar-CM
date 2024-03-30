@@ -11,11 +11,11 @@ function CharacterCardDetail({ characterDetailData }) {
 					/>
 				</div>
 				<div className="detail__character--text">
-					<h4>{`Nombre: ${characterDetailData.name}`}</h4>
-					<p>{`Especie: ${characterDetailData.specie}`}</p>
-					<p>{`Estado: ${characterDetailData.status}`}</p>
-					<p>{`Genero: ${characterDetailData.gender}`}</p>
-					<p>{`Episodios: ${characterDetailData.episodes}`}</p>
+					<h3>Nombre: {characterDetailData.name}</h3>
+					<p>Especie: {characterDetailData.specie === "Human" ? `👤` : `👽`}</p>
+					<p>Estado: {characterDetailData.status === "Dead" ? `☠️` : `🫀`}</p>
+					<p>Origen:{characterDetailData.origin}</p>
+					<p>Episodios: {characterDetailData.episodes}</p>
 				</div>
 			</div>
 			<Link to="/" className="close">

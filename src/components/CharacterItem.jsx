@@ -6,7 +6,10 @@ function CharacterItem({ characterItem }) {
 			<Link to={`/character/${characterItem.id}`}>
 				<img src={characterItem.picture} alt={characterItem.name} />
 				<h1>{characterItem.name}</h1>
-				<p>{characterItem.specie}</p>
+				<p>
+					{characterItem.specie}
+					{characterItem.specie === "Human" ? `👤` : `👽`}
+				</p>
 			</Link>
 		</li>
 	);
