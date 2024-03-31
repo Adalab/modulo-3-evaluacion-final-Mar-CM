@@ -11,7 +11,9 @@ function CharacterCardDetail({ characterDetailData }) {
 					/>
 				</div>
 				<div className="detail__character--text">
-					<h3>Nombre: {characterDetailData.name}</h3>
+					<h3 className="detail__character--text-title">
+						{characterDetailData.name}
+					</h3>
 					<p>Especie: {characterDetailData.specie === "Human" ? `👤` : `👽`}</p>
 					<p>Estado: {characterDetailData.status === "Dead" ? `☠️` : `🫀`}</p>
 					<p>Origen:{characterDetailData.origin}</p>
