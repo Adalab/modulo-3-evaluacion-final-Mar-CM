@@ -1,4 +1,6 @@
-function FilterBySpecies({ onChangeSpecie, valueSpecie }) {
+import PropTypes from "prop-types";
+
+function FilterBySpecies({ onChangeSpecie }) {
 	const handleSpecies = (event) => {
 		onChangeSpecie(event.target.value);
 	};
@@ -19,5 +21,9 @@ function FilterBySpecies({ onChangeSpecie, valueSpecie }) {
 		</div>
 	);
 }
+
+FilterBySpecies.propTypes = {
+	onChangeSpecie: PropTypes.func.isRequired,
+};
 
 export default FilterBySpecies;

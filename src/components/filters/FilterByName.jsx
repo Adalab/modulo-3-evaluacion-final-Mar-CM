@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function FilterByName({ onChangeName, valueName }) {
 	const handleChange = (event) => {
 		onChangeName(event.target.value);
@@ -17,5 +19,10 @@ function FilterByName({ onChangeName, valueName }) {
 		</div>
 	);
 }
+
+FilterByName.propTypes = {
+	onChangeName: PropTypes.func.isRequired,
+	valueName: PropTypes.string.isRequired,
+};
 
 export default FilterByName;

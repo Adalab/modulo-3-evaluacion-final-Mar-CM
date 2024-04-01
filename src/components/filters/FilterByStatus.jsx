@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function FilterByStatus({ onChangeStatus }) {
 	const handleChange = (event) => {
 		onChangeStatus(event.target.value);
@@ -38,5 +40,9 @@ function FilterByStatus({ onChangeStatus }) {
 		</div>
 	);
 }
+
+FilterByStatus.propTypes = {
+	onChangeStatus: PropTypes.func.isRequired,
+};
 
 export default FilterByStatus;

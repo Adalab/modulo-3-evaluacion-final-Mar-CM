@@ -29,11 +29,6 @@ function CharacterCardDetail({ characterDetailData }) {
 }
 CharacterCardDetail.propTypes = {
 	characterDetailData: PropTypes.object.isRequired,
-	name: PropTypes.string.isRequired,
-	specie: PropTypes.string.isRequired,
-	status: PropTypes.string.isRequired,
-	origin: PropTypes.string.isRequired,
-	episodes: PropTypes.string.isRequired,
 };
 
 export default CharacterCardDetail;

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import FilterByName from "./FilterByName";
 import FilterBySpecies from "./FilterBySpecies";
 import FilterByGender from "./FilterByGender";
@@ -29,5 +31,15 @@ function Filters({
 		</section>
 	);
 }
+
+Filters.propTypes = {
+	onChangeName: PropTypes.func.isRequired,
+	onChangeGender: PropTypes.func.isRequired,
+	onChangeSpecie: PropTypes.func.isRequired,
+	onChangeStatus: PropTypes.func.isRequired,
+	valueName: PropTypes.string.isRequired,
+	valueGender: PropTypes.string.isRequired,
+	valueSpecie: PropTypes.string.isRequired,
+};
 
 export default Filters;

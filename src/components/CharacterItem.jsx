@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { Link } from "react-router-dom";
 
 function CharacterItem({ characterItem }) {
@@ -14,5 +16,9 @@ function CharacterItem({ characterItem }) {
 		</li>
 	);
 }
+
+CharacterItem.propTypes = {
+	characterItem: PropTypes.object.isRequired,
+};
 
 export default CharacterItem;
