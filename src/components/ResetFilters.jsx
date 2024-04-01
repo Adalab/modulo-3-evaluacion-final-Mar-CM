@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function ResetFilters({ restartFilters }) {
 	return (
 		<section className="container__reset">
@@ -7,5 +9,8 @@ function ResetFilters({ restartFilters }) {
 		</section>
 	);
 }
+ResetFilters.propTypes = {
+	restartFilters: PropTypes.func.isRequired,
+};
 
 export default ResetFilters;

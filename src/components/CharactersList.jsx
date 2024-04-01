@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import CharacterItem from "./CharacterItem";
 
 function CharactersList({ characters }) {
@@ -11,5 +13,8 @@ function CharactersList({ characters }) {
 		</section>
 	);
 }
+CharactersList.propTypes = {
+	characters: PropTypes.object.isRequired,
+};
 
 export default CharactersList;

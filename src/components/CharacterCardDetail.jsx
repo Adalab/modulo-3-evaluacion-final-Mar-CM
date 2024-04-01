@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 function CharacterCardDetail({ characterDetailData }) {
@@ -14,9 +15,9 @@ function CharacterCardDetail({ characterDetailData }) {
 					<h3 className="detail__character--text-title">
 						{characterDetailData.name}
 					</h3>
-					<p>Especie: {characterDetailData.specie === "Human" ? `👤` : `👽`}</p>
+					<p>Especie: {characterDetailData.specie === "Human" ? `👨🏻` : `👽`}</p>
 					<p>Estado: {characterDetailData.status === "Dead" ? `☠️` : `🫀`}</p>
-					<p>Origen:{characterDetailData.origin}</p>
+					<p>Origen: {characterDetailData.origin}</p>
 					<p>Episodios: {characterDetailData.episodes}</p>
 				</div>
 			</div>
@@ -26,5 +27,13 @@ function CharacterCardDetail({ characterDetailData }) {
 		</section>
 	);
 }
+CharacterCardDetail.propTypes = {
+	characterDetailData: PropTypes.object.isRequired,
+	name: PropTypes.string.isRequired,
+	specie: PropTypes.string.isRequired,
+	status: PropTypes.string.isRequired,
+	origin: PropTypes.string.isRequired,
+	episodes: PropTypes.string.isRequired,
+};
 
 export default CharacterCardDetail;

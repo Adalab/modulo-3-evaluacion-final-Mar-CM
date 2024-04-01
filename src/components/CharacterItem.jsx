@@ -8,7 +8,7 @@ function CharacterItem({ characterItem }) {
 				<h3 className="list__characters--title">{characterItem.name}</h3>
 				<p className="list__characters--text">
 					{characterItem.specie}
-					{characterItem.specie === "Human" ? `👤` : `👽`}
+					{characterItem.specie === "Human" ? `🧍🏽` : `👽`}
 				</p>
 			</Link>
 		</li>

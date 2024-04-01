@@ -14,6 +14,9 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 25px;
+  @media (max-width: 768px) {
+    margin-top: 15px;
+  };
   img{
     width: 50%;
     @media (max-width: 768px) {
@@ -21,7 +24,7 @@ body {
     };
     @media (max-width: 480px) {
       width: 90%;
-    };
+    }
   };
 };
 
@@ -57,11 +60,13 @@ a {
     color: white;
     background-color: black;
     font-family: "Bangers", system-ui;
-
+    text-align: center;
+    @media (max-width: 480px) {
+      width: 150px;
+    }
     ::placeholder {
       color: #1A8E43;
       font-style: italic;
-      text-align: center;
     };
   }
 };
@@ -141,8 +146,8 @@ a {
   }
   @media (max-width: 480px) {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Una columna */
-    grid-template-rows: repeat(20, 1fr); /* 20 filas */
+    grid-template-columns: repeat(1, 1fr); 
+    grid-template-rows: repeat(20, 1fr); 
   }
 
   &__characters {
