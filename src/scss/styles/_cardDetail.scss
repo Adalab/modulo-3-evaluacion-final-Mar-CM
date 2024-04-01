@@ -1,0 +1,68 @@
+.detail {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background-image: url("../images/backvector-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  animation: InCenter 1s ease forwards;
+
+  @keyframes InCenter {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+  &__character{
+    display: flex;
+    align-items: center;
+    padding: 25px 0 25px 0;
+    flex-direction: column;
+    padding-left: 40px;
+
+    &--picture{
+      padding-left: 140px;
+      @media (max-width: 768px) {
+        padding-left: 70px;
+      };
+      img {
+        width: 60%;
+        border-radius: 50%;
+        @media (max-width: 768px) {
+          width: 80%;
+        };
+      };
+    };
+
+    &--text {
+      text-align: center;
+      color: black;
+      font-weight: bold;
+      &-title{
+        color: white;
+        -webkit-text-stroke: 0.5px black;
+      }
+    }
+  }
+};
+
+.close {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  background-color: darkred;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+
+  &:hover {
+    background-color: red;
+    transform: scale(1.1);
+  }
+};

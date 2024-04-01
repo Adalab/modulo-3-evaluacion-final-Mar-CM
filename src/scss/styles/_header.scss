@@ -1,0 +1,18 @@
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  @media (max-width: 768px) {
+    margin-top: 15px;
+  };
+  img{
+    width: 50%;
+    @media (max-width: 768px) {
+      width: 80%;
+    };
+    @media (max-width: 480px) {
+      width: 90%;
+    }
+  };
+};
