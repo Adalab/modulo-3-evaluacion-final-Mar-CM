@@ -107,7 +107,10 @@ function App() {
 									onChangeStatus={handleChangeStatus}
 								/>
 								<ResetFilters restartFilters={handledeletetFilters} />
-								<CharactersList characters={nameCharacterFilter} />
+								<CharactersList
+									characters={nameCharacterFilter}
+									valueName={filterName}
+								/>
 							</>
 						}
 					/>
